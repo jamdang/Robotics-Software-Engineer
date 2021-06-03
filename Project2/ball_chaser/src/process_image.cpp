@@ -35,7 +35,9 @@ void process_image_callback(const sensor_msgs::Image img)
     for (int i = 0; i < img.height; ++i) {
         for (int j = 0; j < img.step; ++j) {
             // if we found a white pixel
-            if (img.data[i*img.step + j] == white_pixel) {
+            if (img.data[i*img.step + j] == white_pixel &&
+                img.data[i*img.step + j + 1] == white_pixel &&
+                img.data[i*img.step + j + 2] == white_pixel) {
                 ball_in_view = true;
                 // get its relative position to center                
                 int half_num_step = img.step/2;
