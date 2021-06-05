@@ -14,8 +14,12 @@
     <param name="transform_tolerance" value="0.2"/>
 
     <!-- If choose to define initial pose here -->
-    <param name="initial_pose_x" value="0.0"/>
-    <param name="initial_pose_y" value="0.0"/>  
+    <param name="initial_pose_x" value="-2.0"/>
+    <param name="initial_pose_y" value="-3.0"/> 
+    <param name="initial_pose_a" value="-1.2"/>  
+    <param name="initial_cov_xx" value="4.0"/>
+    <param name="initial_cov_yy" value="4.0"/>
+    <param name="initial_cov_aa" value="1.0"/>
 
     <!-- overall filter parameters -->
     <param name="max_particles" value="2000"/>
@@ -29,9 +33,9 @@
     <param name="laser_z_rand" value="0.05"/>
 
     <!-- odometry parameters -->
-    <param name="odom_alpha1" value="0.2"/>
+    <param name="odom_alpha1" value="0.1"/>
     <param name="odom_alpha2" value="0.2"/>
-    <param name="odom_alpha3" value="0.2"/>
+    <param name="odom_alpha3" value="0.1"/>
     <param name="odom_alpha4" value="0.2"/>
 
   </node>
